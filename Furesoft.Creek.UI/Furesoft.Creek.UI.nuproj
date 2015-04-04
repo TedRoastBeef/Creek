@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>736f8842-86b8-4f09-90f4-803fc5201ff1</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NuProjPath Condition=" '$(NuProjPath)' == '' ">$(MSBuildExtensionsPath)\NuProj\</NuProjPath>
+  </PropertyGroup>
+  <Import Project="$(NuProjPath)\NuProj.props" Condition="Exists('$(NuProjPath)\NuProj.props')" />
+  <PropertyGroup Label="Configuration">
+    <Id>Furesoft.Creek.UI</Id>
+    <Version>1.0.0</Version>
+    <Title>Furesoft.Creek.UI</Title>
+    <Authors>Furesoft</Authors>
+    <Owners>Furesoft</Owners>
+    <Summary>Furesoft.Creek.UI</Summary>
+    <Description>Furesoft.Creek.UI</Description>
+    <ReleaseNotes>
+    </ReleaseNotes>
+    <ProjectUrl>
+    </ProjectUrl>
+    <LicenseUrl>
+    </LicenseUrl>
+    <Copyright>Copyright © Furesoft</Copyright>
+    <Tags>Furesoft.Creek.UI</Tags>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Creek.MVP\Creek.MVP.csproj" />
+    <ProjectReference Include="..\Creek.UI.DialogBuilder\Creek.UI.Winforms.DialogBuilder.csproj" />
+    <ProjectReference Include="..\Creek.UI.Effects\Creek.UI.Winforms.Effects.csproj" />
+    <ProjectReference Include="..\Creek.UI.EFML\Creek.UI.Winforms.EFML.csproj" />
+    <ProjectReference Include="..\Creek.UI.Theming\Creek.UI.Winforms.Theming.csproj" />
+    <ProjectReference Include="..\Creek.UI\Creek.UI.Winforms.csproj" />
+  </ItemGroup>
+  <Import Project="$(NuProjPath)\NuProj.targets" />
+</Project>

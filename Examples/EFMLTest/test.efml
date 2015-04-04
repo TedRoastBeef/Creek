@@ -1,0 +1,104 @@
+﻿<window>
+  <head>
+    <meta name="Title" value="TestWindow" />
+	<!--<meta name="ControlProvider" value="Metro.provider" />"-->
+    <style>
+		#outID {
+			margin: 0px 13px;
+			autosize: true;
+		}
+		#inTB {
+			forecolor: rgb(3, 5, 3);
+			font: Consolas, 16;
+			autosize: true;
+		}
+		#groupContainer {
+			margin: 100px 130px;
+			autosize: true;
+		}
+		#combo {
+			style: list;
+			autosize: true;
+		}
+		#nav {
+			backgroundimage: url('https://furesoft.pf-control.de/efml/BACKGROUND.PNG');
+		}
+	</style>
+    <script>
+		function onClick() {
+			var txt = $("inTB").value;
+			alert(txt);
+		}
+		$(function(sender, e) {
+			alert("hello to my EFML-Application :D");
+		});
+		$("FormClosing", function(sender, e) {
+			alert("Application is closing");
+		});
+		function onLinkClick() {
+			var e = $("inTB");	
+			var d = $("helloContainer");
+			
+			//e.content = "chris anders";
+			d.style.padding.Top = 100;
+			var t = new Transition(new bounce(5000));
+			t.add(ui(d), "BackColor", color("red"));
+			t.add(ui($("nav")), "ChildColor", color("royalblue"));
+			t.add(ui($("nav")), "TitleColor", color("#FFF000"));
+			t.run();
+		}
+		function hoverCursor() {
+			var t = new Transition(new linear(5000));
+			t.add(ui($("helloContainer")), "BackColor", color("yellow"));
+			r.run();
+		}
+		function onSelect() {
+			var d = $("combo");
+			var e = global.$("inTB");
+			
+			$("helloContainer").style.autosize = true;
+			//e.content = d.content;
+			
+			//global.alert(document.all.combo.content);
+		}
+	</script>
+  </head>
+  <body>
+	  <audio type="wav" id="Aud" src="hello.wav" autoplay="autoplay"/>
+	  <video type="avi" id="Vid" src="hello.avi" autoplay="autoplay"/>
+	  
+	  <div id="helloContainer" onhover="hoverCursor();">
+		  <image id="img1" src='' />
+		  <link id="helloKlick" Content="Click ME!!" onclick="onLinkClick()"/>
+	  </div>
+	  <group id='groupContainer' caption='hello world'>
+		  <input type="date" id="daateT" placeholder="DD.MM.YYYY" />
+	  </group>
+	  <tab id="Tb1">
+		  <page caption="hello">
+			  <input type="radio" id="rb1" value="false" text="einz" />
+		  </page>
+	  </tab>
+	  <dropdown id="combo" onselectionchange="onSelect();">
+		  <item value="hello" />
+		  <item value="world" />
+	  </dropdown>
+	  <input type="mail" id="inTB" placeholder="max.mustermann@muster.de" />
+	  <input type="text" id="inTB" placeholder="hallo welt" Content="" />
+	  <input type="button" id="okBtn" Content="Click ME" />
+	  <input type='password' id='pswrdInpt' />
+	  <input type="check" id="cb1" value="true" Content="wahr?" />
+	  <line id="helloLine" />
+	  <nav id="nav">
+		  <page caption="Welcome">
+			  <input type="radio" id="rb1" value="false" Content="einz" />
+			  <label id="outID" Content="ID: " />
+		  </page>
+		  <page caption="Contact">
+			  <div id="helloContainer">
+				  <link id="helloKlick2" Content="Click ME2!!" />
+			  </div>
+		  </page>
+	  </nav>
+  </body>
+</window>

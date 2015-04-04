@@ -1,0 +1,12 @@
+continue Lib.Security.UsbKeys
+implement updates + update manager application
+continue messaging
+	- add feature to send message to other application
+implement session class
+dependencycontainer repair7
+implement xml function (Creek.Dynamics.dll)
+implement own config class: own configsectionprovider and so on
+implement diagnostic blackbox
+implement a full testcenter
+implement macro manager + recorder
+implement authentication with qrcode

@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{393E2AB7-B4E3-4C69-B99F-D0404B92AED7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Creek.Scripting</RootNamespace>
+    <AssemblyName>Furesoft.Creek.Scripting</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Clearscript\BindSignature.cs" />
+    <Compile Include="Clearscript\ByRefArg.cs" />
+    <Compile Include="Clearscript\ContinuationCallback.cs" />
+    <Compile Include="Clearscript\DelegateFactory.cs" />
+    <Compile Include="Clearscript\DelegateFactory.Generated.cs" />
+    <Compile Include="Clearscript\ExtensionMethods.cs" />
+    <Compile Include="Clearscript\HostEvent.cs" />
+    <Compile Include="Clearscript\HostFunctions.cs" />
+    <Compile Include="Clearscript\HostIndexedProperty.cs" />
+    <Compile Include="Clearscript\HostItem.cs" />
+    <Compile Include="Clearscript\HostItem.InvokeMethod.cs" />
+    <Compile Include="Clearscript\HostItem.Members.cs" />
+    <Compile Include="Clearscript\HostItemFlags.cs" />
+    <Compile Include="Clearscript\HostMethod.cs" />
+    <Compile Include="Clearscript\HostObject.cs" />
+    <Compile Include="Clearscript\HostTarget.cs" />
+    <Compile Include="Clearscript\HostTargetFlags.cs" />
+    <Compile Include="Clearscript\HostType.cs" />
+    <Compile Include="Clearscript\HostTypeCollection.cs" />
+    <Compile Include="Clearscript\HostVariable.cs" />
+    <Compile Include="Clearscript\IScriptableObject.cs" />
+    <Compile Include="Clearscript\IScriptEngineException.cs" />
+    <Compile Include="Clearscript\NoScriptAccessAttribute.cs" />
+    <Compile Include="Clearscript\PropertyBag.cs" />
+    <Compile Include="Clearscript\ScriptAccess.cs" />
+    <Compile Include="Clearscript\ScriptEngine.cs" />
+    <Compile Include="Clearscript\ScriptEngineException.cs" />
+    <Compile Include="Clearscript\ScriptInterruptedException.cs" />
+    <Compile Include="Clearscript\ScriptItem.cs" />
+    <Compile Include="Clearscript\ScriptMemberAttribute.cs" />
+    <Compile Include="Clearscript\ScriptMemberFlags.cs" />
+    <Compile Include="Clearscript\ScriptMethod.cs" />
+    <Compile Include="Clearscript\ScriptUsageAttribute.cs" />
+    <Compile Include="Clearscript\Undefined.cs" />
+    <Compile Include="Clearscript\Util\ArrayHelpers.cs" />
+    <Compile Include="Clearscript\Util\AssemblyHelpers.cs" />
+    <Compile Include="Clearscript\Util\ConcurrentWeakSet.cs" />
+    <Compile Include="Clearscript\Util\DynamicHelpers.cs" />
+    <Compile Include="Clearscript\Util\EnumerableHelpers.cs" />
+    <Compile Include="Clearscript\Util\IDynamic.cs" />
+    <Compile Include="Clearscript\Util\InvokeHelpers.cs" />
+    <Compile Include="Clearscript\Util\IScriptMarshalWrapper.cs" />
+    <Compile Include="Clearscript\Util\MemberHelpers.cs" />
+    <Compile Include="Clearscript\Util\MiscHelpers.cs" />
+    <Compile Include="Clearscript\Util\Nonexistent.cs" />
+    <Compile Include="Clearscript\Util\ObjectHelpers.cs" />
+    <Compile Include="Clearscript\Util\RawCOMHelpers.cs" />
+    <Compile Include="Clearscript\Util\SpecialMemberNames.cs" />
+    <Compile Include="Clearscript\Util\SpecialParamNames.cs" />
+    <Compile Include="Clearscript\Util\TypeHelpers.cs" />
+    <Compile Include="Clearscript\Util\UniqueNameManager.cs" />
+    <Compile Include="Clearscript\VoidResult.cs" />
+    <Compile Include="Clearscript\Windows\ActiveXDebugging.cs" />
+    <Compile Include="Clearscript\Windows\ActiveXScripting.cs" />
+    <Compile Include="Clearscript\Windows\ActiveXWrappers.cs" />
+    <Compile Include="Clearscript\Windows\WindowsScriptEngine.cs" />
+    <Compile Include="Clearscript\Windows\WindowsScriptEngine.Debug.cs" />
+    <Compile Include="Clearscript\Windows\WindowsScriptEngine.Site.cs" />
+    <Compile Include="Clearscript\Windows\WindowsScriptEngineFlags.cs" />
+    <Compile Include="Clearscript\Windows\WindowsScriptItem.cs" />
+    <Compile Include="Commandparser\Common\Class.cs" />
+    <Compile Include="Commandparser\Common\Constructor.cs" />
+    <Compile Include="Commandparser\Common\ExpressionEvaluator.cs" />
+    <Compile Include="Commandparser\Common\Function.cs" />
+    <Compile Include="Commandparser\Common\IPropertyObject.cs" />
+    <Compile Include="Commandparser\Common\Method.cs" />
+    <Compile Include="Commandparser\Common\Section.cs" />
+    <Compile Include="Commandparser\Common\SectionHeader.cs" />
+    <Compile Include="Commandparser\Common\SectionType.cs" />
+    <Compile Include="Commandparser\Exceptions\FatalError.cs" />
+    <Compile Include="Commandparser\Exceptions\RuntimeError.cs" />
+    <Compile Include="Commandparser\Exceptions\SyntaxError.cs" />
+    <Compile Include="Commandparser\Interpreter.cs" />
+    <Compile Include="Commandparser\TP\ClassParser.cs" />
+    <Compile Include="Commandparser\TP\FunctionParser.cs" />
+    <Compile Include="Commandparser\TP\UseStatementParser.cs" />
+    <Compile Include="Commandparser\TP\VarDefParser.cs" />
+    <Compile Include="Commandparser\TP\VarSetParser.cs" />
+    <Compile Include="Commandparser\Types\array.cs" />
+    <Compile Include="Commandparser\Types\Converter.cs" />
+    <Compile Include="Commandparser\Types\CreateObjectMethod.cs" />
+    <Compile Include="Commandparser\Types\decimal.cs" />
+    <Compile Include="Commandparser\Types\expression.cs" />
+    <Compile Include="Commandparser\Types\integer.cs" />
+    <Compile Include="Commandparser\Types\newLiteral.cs" />
+    <Compile Include="Commandparser\Types\null.cs" />
+    <Compile Include="Commandparser\Types\string.cs" />
+    <Compile Include="Commandparser\Types\var.cs" />
+    <Compile Include="JScriptEngine.cs" />
+    <Compile Include="ScriptingTypes\Debug\FirebugConsole.cs" />
+    <Compile Include="ScriptingTypes\Debug\IFirebugConsoleOutput.cs" />
+    <Compile Include="ScriptingTypes\Debug\StandardConsoleOutput.cs" />
+    <Compile Include="ScriptingTypes\File.cs" />
+    <Compile Include="ScriptingTypes\Functions.cs" />
+    <Compile Include="VBScriptEngine.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Commandparser\Bugs.txt" />
+    <Content Include="Commandparser\ToDo.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

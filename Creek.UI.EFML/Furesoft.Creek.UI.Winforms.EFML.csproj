@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{43216F34-E90E-4CAD-BE77-0EE3AA59183A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Creek.UI.Winforms.EFML</RootNamespace>
+    <AssemblyName>Furesoft.Creek.UI.Winforms.EFML</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\Controls\ControlStyle.cs" />
+    <Compile Include="Base\Controls\Dropdown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\DivPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Line.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Navigator\HeadlessTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Navigator\PageNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\PlaceholderTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Navigator\TravelButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Controls\Navigator\TravelButton.designer.cs">
+      <DependentUpon>TravelButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\CSS\Converters\BoolConverter.cs" />
+    <Compile Include="Base\CSS\Converters\InternalImageConverter.cs" />
+    <Compile Include="Base\CSS\Converters\TimeConverter.cs" />
+    <Compile Include="Base\CSS\Converters\NullConverter.cs" />
+    <Compile Include="Base\CSS\HSLColor.cs" />
+    <Compile Include="Base\CSS\Converters\TransitionConverter.cs" />
+    <Compile Include="Base\EFML\Processors\NavigatorProcessor.cs" />
+    <Compile Include="Base\EFML\Processors\TabControlProcessor.cs" />
+    <Compile Include="Base\EFML\UI-Elements\Navigator.cs" />
+    <Compile Include="Base\EFML\UI-Elements\TabControl.cs" />
+    <Compile Include="Base\Global.cs" />
+    <Compile Include="Base\IUIElement.cs" />
+    <Compile Include="Base\JS\Clearscript\BindSignature.cs" />
+    <Compile Include="Base\JS\Clearscript\ByRefArg.cs" />
+    <Compile Include="Base\JS\Clearscript\ContinuationCallback.cs" />
+    <Compile Include="Base\JS\Clearscript\DelegateFactory.cs" />
+    <Compile Include="Base\JS\Clearscript\DelegateFactory.Generated.cs" />
+    <Compile Include="Base\JS\Clearscript\ExtensionMethods.cs" />
+    <Compile Include="Base\JS\Clearscript\HostEvent.cs" />
+    <Compile Include="Base\JS\Clearscript\HostFunctions.cs" />
+    <Compile Include="Base\JS\Clearscript\HostIndexedProperty.cs" />
+    <Compile Include="Base\JS\Clearscript\HostItem.cs" />
+    <Compile Include="Base\JS\Clearscript\HostItem.InvokeMethod.cs" />
+    <Compile Include="Base\JS\Clearscript\HostItem.Members.cs" />
+    <Compile Include="Base\JS\Clearscript\HostItemFlags.cs" />
+    <Compile Include="Base\JS\Clearscript\HostMethod.cs" />
+    <Compile Include="Base\JS\Clearscript\HostObject.cs" />
+    <Compile Include="Base\JS\Clearscript\HostTarget.cs" />
+    <Compile Include="Base\JS\Clearscript\HostTargetFlags.cs" />
+    <Compile Include="Base\JS\Clearscript\HostType.cs" />
+    <Compile Include="Base\JS\Clearscript\HostTypeCollection.cs" />
+    <Compile Include="Base\JS\Clearscript\HostVariable.cs" />
+    <Compile Include="Base\JS\Clearscript\IScriptableObject.cs" />
+    <Compile Include="Base\JS\Clearscript\IScriptEngineException.cs" />
+    <Compile Include="Base\JS\Clearscript\NoScriptAccessAttribute.cs" />
+    <Compile Include="Base\JS\Clearscript\PropertyBag.cs" />
+    <Compile Include="Base\JS\Clearscript\ScriptAccess.cs" />
+    <Compile Include="Base\JS\Clearscript\ScriptEngine.cs" />
+    <Compile Include="Base\JS\Clearscript\ScriptEngineException.cs" />
+    <Compile Include="Base\JS\Clearscript\ScriptInterruptedException.cs" />
+    <Compile Include="Base\JS\Clearscript\ScriptItem.cs" />
+    <Compile Include="Base\JS\Clearscript\ScriptMemberAttribute.cs" />
+    <Compile Include="Base\JS\Clearscript\ScriptMemberFlags.cs" />
+    <Compile Include="Base\JS\Clearscript\ScriptMethod.cs" />
+    <Compile Include="Base\JS\Clearscript\ScriptUsageAttribute.cs" />
+    <Compile Include="Base\JS\Clearscript\Undefined.cs" />
+    <Compile Include="Base\JS\Clearscript\Util\ArrayHelpers.cs" />
+    <Compile Include="Base\JS\Clearscript\Util\AssemblyHelpers.cs" />
+    <Compile Include="Base\JS\Clearscript\Util\ConcurrentWeakSet.cs" />
+    <Compile Include="Base\JS\Clearscript\Util\DynamicHelpers.cs" />
+    <Compile Include="Base\JS\Clearscript\Util\EnumerableHelpers.cs" />
+    <Compile Include="Base\JS\Clearscript\Util\IDynamic.cs" />
+    <Compile Include="Base\JS\Clearscript\Util\InvokeHelpers.cs" />
+    <Compile Include="Base\JS\Clearscript\Util\IScriptMarshalWrapper.cs" />
+    <Compile Include="Base\JS\Clearscript\Util\MemberHelpers.cs" />
+    <Compile Include="Base\JS\Clearscript\Util\MiscHelpers.cs" />
+    <Compile Include="Base\JS\Clearscript\Util\Nonexistent.cs" />
+    <Compile Include="Base\JS\Clearscript\Util\ObjectHelpers.cs" />
+    <Compile Include="Base\JS\Clearscript\Util\RawCOMHelpers.cs" />
+    <Compile Include="Base\JS\Clearscript\Util\SpecialMemberNames.cs" />
+    <Compile Include="Base\JS\Clearscript\Util\SpecialParamNames.cs" />
+    <Compile Include="Base\JS\Clearscript\Util\TypeHelpers.cs" />
+    <Compile Include="Base\JS\Clearscript\Util\UniqueNameManager.cs" />
+    <Compile Include="Base\JS\Clearscript\VoidResult.cs" />
+    <Compile Include="Base\JS\Clearscript\Windows\ActiveXDebugging.cs" />
+    <Compile Include="Base\JS\Clearscript\Windows\ActiveXScripting.cs" />
+    <Compile Include="Base\JS\Clearscript\Windows\ActiveXWrappers.cs" />
+    <Compile Include="Base\JS\Clearscript\Windows\WindowsScriptEngine.cs" />
+    <Compile Include="Base\JS\Clearscript\Windows\WindowsScriptEngine.Debug.cs" />
+    <Compile Include="Base\JS\Clearscript\Windows\WindowsScriptEngine.Site.cs" />
+    <Compile Include="Base\JS\Clearscript\Windows\WindowsScriptEngineFlags.cs" />
+    <Compile Include="Base\JS\Clearscript\Windows\WindowsScriptItem.cs" />
+    <Compile Include="Base\JS\JScriptEngine.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Bson\BsonBinaryType.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Bson\BsonBinaryWriter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Bson\BsonObjectId.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Bson\BsonReader.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Bson\BsonToken.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Bson\BsonType.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Bson\BsonWriter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\ConstructorHandling.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Converters\BinaryConverter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Converters\BsonObjectIdConverter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Converters\CustomCreationConverter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Converters\DataSetConverter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Converters\DataTableConverter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Converters\DateTimeConverterBase.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Converters\EntityKeyMemberConverter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Converters\ExpandoObjectConverter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Converters\IsoDateTimeConverter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Converters\JavaScriptDateTimeConverter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Converters\JsonDateTimeSerializationMode.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Converters\KeyValuePairConverter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Converters\RegexConverter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Converters\StringEnumConverter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Converters\VersionConverter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Converters\XmlNodeConverter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\DefaultValueHandling.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\IJsonLineInfo.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\JsonArrayAttribute.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\JsonConstructorAttribute.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\JsonContainerAttribute.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\JsonConvert.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\JsonConverter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\JsonConverterAttribute.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\JsonConverterCollection.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\JsonIgnoreAttribute.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\JsonObjectAttribute.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\JsonPropertyAttribute.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\JsonReader.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\JsonReaderException.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\JsonSerializationException.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\JsonSerializer.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\JsonSerializerSettings.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\JsonTextReader.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\JsonTextWriter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\JsonToken.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\JsonValidatingReader.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\JsonWriter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\JsonWriterException.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Linq\Extensions.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Linq\IJEnumerable.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Linq\JArray.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Linq\JConstructor.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Linq\JContainer.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Linq\JEnumerable.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Linq\JObject.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Linq\JPath.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Linq\JProperty.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Linq\JPropertyDescriptor.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Linq\JRaw.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Linq\JToken.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Linq\JTokenEqualityComparer.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Linq\JTokenReader.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Linq\JTokenType.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Linq\JTokenWriter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Linq\JValue.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\MemberSerialization.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\MissingMemberHandling.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\NullValueHandling.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\ObjectCreationHandling.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\PreserveReferencesHandling.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\ReferenceLoopHandling.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Required.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Schema\Extensions.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Schema\JsonSchema.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Schema\JsonSchemaBuilder.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Schema\JsonSchemaConstants.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Schema\JsonSchemaException.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Schema\JsonSchemaGenerator.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Schema\JsonSchemaModel.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Schema\JsonSchemaModelBuilder.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Schema\JsonSchemaNode.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Schema\JsonSchemaNodeCollection.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Schema\JsonSchemaResolver.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Schema\JsonSchemaType.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Schema\JsonSchemaWriter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Schema\UndefinedSchemaIdHandling.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Schema\ValidationEventArgs.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Schema\ValidationEventHandler.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\SerializationBinder.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\CachedAttributeGetter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\CamelCasePropertyNamesContractResolver.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\DefaultContractResolver.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\DefaultReferenceResolver.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\DefaultSerializationBinder.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\DynamicValueProvider.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\ErrorContext.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\ErrorEventArgs.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\IContractResolver.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\IReferenceResolver.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\IValueProvider.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\JsonArrayContract.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\JsonContract.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\JsonDictionaryContract.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\JsonDynamicContract.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\JsonFormatterConverter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\JsonISerializableContract.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\JsonLinqContract.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\JsonObjectContract.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\JsonPrimitiveContract.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\JsonProperty.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\JsonPropertyCollection.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\JsonSerializerInternalBase.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\JsonSerializerInternalReader.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\JsonSerializerInternalWriter.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\JsonSerializerProxy.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\JsonStringContract.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\JsonTypeReflector.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\LateBoundMetadataTypeAttribute.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\ObjectConstructor.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\OnErrorAttribute.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Serialization\ReflectionValueProvider.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\StreamingContext.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\TypeNameHandling.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\Base64Encoder.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\BidirectionalDictionary.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\CollectionUtils.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\CollectionWrapper.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\ConvertUtils.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\DateTimeUtils.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\DictionaryWrapper.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\DynamicProxy.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\DynamicProxyMetaObject.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\DynamicReflectionDelegateFactory.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\DynamicUtils.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\DynamicWrapper.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\EnumUtils.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\EnumValue.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\EnumValues.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\ILGeneratorExtensions.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\JavaScriptUtils.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\LateBoundReflectionDelegateFactory.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\LinqBridge.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\ListWrapper.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\MathUtils.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\MethodCall.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\MiscellaneousUtils.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\ReflectionDelegateFactory.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\ReflectionUtils.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\StringBuffer.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\StringReference.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\StringUtils.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\ThreadSafeStore.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Base\JSON\Utilities\ValidationUtils.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Console\FirebugConsole.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Console\IFirebugConsoleOutput.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Console\StandardConsoleOutput.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\DocumentAll.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Document.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Extensions.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Functions.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Get.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Info\Battery.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Info\Bios.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Info\Bus.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Info\Computer.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Info\CPU.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Info\DiskDrive.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Info\Graphiccard.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Info\Hardware.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Iterator.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\JSON.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Math.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Object.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Screen.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Transitions\IManagedType.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Transitions\ITransitionType.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Transitions\ManagedType_Color.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Transitions\ManagedType_Double.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Transitions\ManagedType_Float.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Transitions\ManagedType_Int.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Transitions\ManagedType_String.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Transitions\Transition.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Transitions\TransitionChain.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Transitions\TransitionElement.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Transitions\TransitionManager.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Transitions\TransitionType_Acceleration.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Transitions\TransitionType_Bounce.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Transitions\TransitionType_CriticalDamping.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Transitions\TransitionType_Deceleration.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Transitions\TransitionType_EaseInEaseOut.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Transitions\TransitionType_Flash.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Transitions\TransitionType_Linear.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Transitions\TransitionType_ThrowAndCatch.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Transitions\TransitionType_UserDefined.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Transitions\Utility.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\Window.cs" />
+    <Compile Include="Base\JS\ScriptingTypes\XmlHttpRequest.cs" />
+    <Compile Include="Base\TagnameProvider.cs" />
+    <Compile Include="Base\WinformsControlProvider.cs" />
+    <Compile Include="ControlProvider.cs" />
+    <Compile Include="Base\CSS\Converters\EnumConverter.cs" />
+    <Compile Include="Base\DefaultEventProvider.cs" />
+    <Compile Include="Base\EFMLDocument.cs" />
+    <Compile Include="Base\Exceptions\CssException.cs" />
+    <Compile Include="Base\Exceptions\EfmlException.cs" />
+    <Compile Include="Base\Exceptions\JsException.cs" />
+    <Compile Include="Base\IValidator.cs" />
+    <Compile Include="Base\ProcessorCollection.cs" />
+    <Compile Include="Base\Tag.cs" />
+    <Compile Include="Base\Validators\DateValidator.cs" />
+    <Compile Include="Base\Validators\EmailValidator.cs" />
+    <Compile Include="Base\Validators\VersionValidator.cs" />
+    <Compile Include="Base\Validators\NumberValidator.cs" />
+    <Compile Include="Builder.cs" />
+    <Compile Include="Base\CSS\Converters\ColorConverter.cs" />
+    <Compile Include="Base\CSS\Converters\FontConverter.cs" />
+    <Compile Include="Base\CSS\Converters\ImageConverter.cs" />
+    <Compile Include="Base\CSS\Converters\PaddingConverter.cs" />
+    <Compile Include="Base\CSS\Converters\SizeConverter.cs" />
+    <Compile Include="Base\CSS\Converters\PointConverter.cs" />
+    <Compile Include="Base\CSS\Converters\StringConverter.cs" />
+    <Compile Include="Base\CSS\Converters\NumberConverter.cs" />
+    <Compile Include="Base\CSS\Function.cs" />
+    <Compile Include="Base\CSS\IConverter.cs" />
+    <Compile Include="Document.cs" />
+    <Compile Include="EFMLForm.cs" />
+    <Compile Include="Base\ElementProcessor.cs" />
+    <Compile Include="Base\EFML\Elements\ChooseElement.cs" />
+    <Compile Include="Base\EFML\Processors\FlashProcessor.cs" />
+    <Compile Include="Base\EFML\Processors\DivProcessor.cs" />
+    <Compile Include="Base\EFML\Processors\GroupProcessor.cs" />
+    <Compile Include="Base\EFML\Processors\DropDownProcessor.cs" />
+    <Compile Include="Base\EFML\Processors\AudioProcessor.cs" />
+    <Compile Include="Base\EFML\Processors\LineProcessor.cs" />
+    <Compile Include="Base\EFML\Processors\TableProcessor.cs" />
+    <Compile Include="Base\EFML\Processors\VideoProcessor.cs" />
+    <Compile Include="Base\EFML\UI-Elements\Button.cs" />
+    <Compile Include="Base\EFML\UI-Elements\FlashElement.cs" />
+    <Compile Include="Base\EFML\Elements\ValidatorElement.cs" />
+    <Compile Include="Base\EFML\Processors\ObjectProcessor.cs" />
+    <Compile Include="Base\EFML\Processors\ImageProcessor.cs" />
+    <Compile Include="Base\EFML\Processors\InputProcessor.cs" />
+    <Compile Include="Base\EFML\Processors\LabelProcessor.cs" />
+    <Compile Include="Base\EFML\Processors\LinkProcessor.cs" />
+    <Compile Include="Base\EFML\UI-Elements\ChooseElements.cs" />
+    <Compile Include="Base\EFML\UI-Elements\EventProviders\CheckBoxEventProvider.cs" />
+    <Compile Include="Base\EFML\UI-Elements\Image.cs" />
+    <Compile Include="Base\EFML\UI-Elements\InputElement.cs" />
+    <Compile Include="Base\EventProvider.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Base\CSS\StyleChanger.cs" />
+    <Compile Include="Base\CSS\CssParser.cs" />
+    <Compile Include="Base\CSS\CssParserDeclaration.cs" />
+    <Compile Include="Base\CSS\CssParserRule.cs" />
+    <Compile Include="Base\CSS\TextParser.cs" />
+    <Compile Include="Base\ElementBase.cs" />
+    <Compile Include="Base\EFML\Elements\ContainerElement.cs" />
+    <Compile Include="Base\EFML\Elements\ListElement.cs" />
+    <Compile Include="Base\EFML\Elements\MetaElement.cs" />
+    <Compile Include="Base\EFML\Elements\ScriptElement.cs" />
+    <Compile Include="Base\EFML\Elements\StyleElement.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Base\EFML\UI-Elements\ImageElement.cs" />
+    <Compile Include="Base\EFML\UI-Elements\Dropdown.cs" />
+    <Compile Include="Base\EFML\UI-Elements\ObjectElement.cs" />
+    <Compile Include="Base\EFML\UI-Elements\EventProviders\DefaultEventProvider.cs" />
+    <Compile Include="Base\EFML\UI-Elements\EventProviders\ListEventProvider.cs" />
+    <Compile Include="Base\EFML\UI-Elements\EventProviders\LinkEventProvider.cs" />
+    <Compile Include="Base\EFML\UI-Elements\EventProviders\TextEventProvider.cs" />
+    <Compile Include="Base\EFML\UI-Elements\Div.cs" />
+    <Compile Include="Base\EFML\UI-Elements\Group.cs" />
+    <Compile Include="Base\EFML\UI-Elements\AudioElement.cs" />
+    <Compile Include="Base\EFML\UI-Elements\Line.cs" />
+    <Compile Include="Base\EFML\UI-Elements\PasswordBox.cs" />
+    <Compile Include="Base\EFML\UI-Elements\Label.cs" />
+    <Compile Include="Base\EFML\UI-Elements\Link.cs" />
+    <Compile Include="Base\EFML\UI-Elements\Table.cs" />
+    <Compile Include="Base\EFML\UI-Elements\TextArea.cs" />
+    <Compile Include="Base\EFML\UI-Elements\TextBox.cs" />
+    <Compile Include="Base\EFML\UI-Elements\VideoElement.cs" />
+    <Compile Include="Base\EFML\UI-Elements\List.cs" />
+    <Compile Include="Base\UIElement.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LEFTBUTTON.PNG" />
+    <None Include="Resources\RIGHTBUTTON.PNG" />
+    <Content Include="Resources\BACKGROUND_arrowless.PNG" />
+    <None Include="Resources\transparent.PNG" />
+    <Content Include="ToDo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Base\Controls\Navigator\PageNavigator.resx">
+      <DependentUpon>PageNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\Controls\Navigator\TravelButton.resx">
+      <DependentUpon>TravelButton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 und x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Base\Controls\Winforms\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

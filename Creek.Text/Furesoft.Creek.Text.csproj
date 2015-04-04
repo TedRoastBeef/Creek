@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{83098449-2479-417D-A413-7E2A3E9A3C3B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Creek.Text</RootNamespace>
+    <AssemblyName>Furesoft.Creek.Text</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConsoleTable.cs" />
+    <Compile Include="Encryption.cs" />
+    <Compile Include="Format\Core\ErrorAction.cs" />
+    <Compile Include="Format\Core\Extensions\FormatDetails.cs" />
+    <Compile Include="Format\Core\Extensions\IFormatter.cs" />
+    <Compile Include="Format\Core\Extensions\ISource.cs" />
+    <Compile Include="Format\Core\FormatCache.cs" />
+    <Compile Include="Format\Core\FormatException.cs" />
+    <Compile Include="Format\Core\Output\IOutput.cs" />
+    <Compile Include="Format\Core\Output\StringOutput.cs" />
+    <Compile Include="Format\Core\Output\TextWriterOutput.cs" />
+    <Compile Include="Format\Core\Parsing\Format.cs" />
+    <Compile Include="Format\Core\Parsing\FormatItem.cs" />
+    <Compile Include="Format\Core\Parsing\LiteralText.cs" />
+    <Compile Include="Format\Core\Parsing\Parser.cs" />
+    <Compile Include="Format\Core\Parsing\ParsingErrors.cs" />
+    <Compile Include="Format\Core\Parsing\Placeholder.cs" />
+    <Compile Include="Format\Core\Parsing\Selector.cs" />
+    <Compile Include="Format\Core\Settings\CaseSensitivityType.cs" />
+    <Compile Include="Format\Core\Settings\SmartSettings.cs" />
+    <Compile Include="Format\Extensions\ConditionalFormatter.cs" />
+    <Compile Include="Format\Extensions\DefaultFormatter.cs" />
+    <Compile Include="Format\Extensions\DefaultSource.cs" />
+    <Compile Include="Format\Extensions\DictionarySource.cs" />
+    <Compile Include="Format\Extensions\ListFormatter.cs" />
+    <Compile Include="Format\Extensions\PluralLocalizationFormatter.cs" />
+    <Compile Include="Format\Extensions\ReflectionSource.cs" />
+    <Compile Include="Format\Extensions\TimeFormatter.cs" />
+    <Compile Include="Format\Smart.cs" />
+    <Compile Include="Format\SmartExtensions.cs" />
+    <Compile Include="Format\SmartFormatter.cs" />
+    <Compile Include="Format\Utilities\FormatDelegate.cs" />
+    <Compile Include="Format\Utilities\TimeSpanUtility.cs" />
+    <Compile Include="LinkFinder.cs" />
+    <Compile Include="LinkItem.cs" />
+    <Compile Include="Multipart\BinaryStreamStack.cs" />
+    <Compile Include="Multipart\FilePart.cs" />
+    <Compile Include="Multipart\MultipartFormDataParser.cs" />
+    <Compile Include="Multipart\MultipartParseException.cs" />
+    <Compile Include="Multipart\ParameterPart.cs" />
+    <Compile Include="Multipart\RebufferableBinaryReader.cs" />
+    <Compile Include="Multipart\SubsequenceFinder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryBuilder.cs" />
+    <Compile Include="RomanInterpreter.cs" />
+    <Compile Include="StringFormatter.cs" />
+    <Compile Include="StringGenerator.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <SolutionNameWithPath>AdvancedCustomization</SolutionNameWithPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1AFC2A6D-E4B9-4450-9CE0-879E0D42A296}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MVCSharp.Examples.AdvancedCustomization</RootNamespace>
+    <AssemblyName>MVCSharp.Examples.AdvancedCustomization</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MT.WindowsUI, Version=2.6.4.0, Culture=neutral, PublicKeyToken=6a0e81d0b9165633, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>3rd-Party Components\MT.WindowsUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Office2007Renderer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>3rd-Party Components\Office2007Renderer.dll</HintPath>
+    </Reference>
+    <Reference Include="Owf.Controls.OutlookPanelEx, Version=1.0.3219.22024, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>3rd-Party Components\Owf.Controls.OutlookPanelEx.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationLogic\IDynamicViewsManager.cs" />
+    <Compile Include="ApplicationLogic\IMailView.cs" />
+    <Compile Include="ApplicationLogic\InteractionPointInfoEx.cs" />
+    <Compile Include="ApplicationLogic\MailController.cs" />
+    <Compile Include="ApplicationLogic\MainTask.cs" />
+    <Compile Include="ApplicationLogic\MainViewController.cs" />
+    <Compile Include="ApplicationLogic\IPointExAttribute.cs" />
+    <Compile Include="ApplicationLogic\NavigatorEx.cs" />
+    <Compile Include="ApplicationLogic\NewMailPropertiesViewController.cs" />
+    <Compile Include="ApplicationLogic\NoteController.cs" />
+    <Compile Include="ApplicationLogic\TaskInfoByAttributesProviderEx.cs" />
+    <Compile Include="ApplicationLogic\TaskController.cs" />
+    <Compile Include="ApplicationLogic\ViewCategory.cs" />
+    <Compile Include="Model\Mail.cs" />
+    <Compile Include="ApplicationLogic\IMainView.cs" />
+    <Compile Include="Presentation\MailSendingFailureView.cs" />
+    <Compile Include="Presentation\MailSendingFailureView.Designer.cs">
+      <DependentUpon>MailSendingFailureView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\MailSendingSuccessView.cs" />
+    <Compile Include="Presentation\MailSendingSuccessView.Designer.cs">
+      <DependentUpon>MailSendingSuccessView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\MailView.cs" />
+    <Compile Include="Presentation\MailView.Designer.cs">
+      <DependentUpon>MailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\MainForm.cs" />
+    <Compile Include="Presentation\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\NoteView.cs" />
+    <Compile Include="Presentation\NoteView.Designer.cs">
+      <DependentUpon>NoteView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\OutlookLikeViewsManager.cs" />
+    <Compile Include="Presentation\PinnedNoteView.cs" />
+    <Compile Include="Presentation\PinnedNoteView.Designer.cs">
+      <DependentUpon>PinnedNoteView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Program.cs" />
+    <Compile Include="Presentation\TaskView.cs" />
+    <Compile Include="Presentation\TaskView.Designer.cs">
+      <DependentUpon>TaskView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\ViewExAttribute.cs" />
+    <Compile Include="Presentation\ViewInfoEx.cs" />
+    <Compile Include="Presentation\ViewInfosPrividerEx.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation\MailSendingFailureView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MailSendingFailureView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\MailSendingSuccessView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MailSendingSuccessView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\MailView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MailView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\NoteView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NoteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\PinnedNoteView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PinnedNoteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\TaskView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TaskView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tasks24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Post.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tasks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Creek.MVP\Creek.MVP.csproj">
+      <Project>{254D6834-899E-4DEB-B349-0DC7903FE304}</Project>
+      <Name>Creek.MVP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Target Name="CleanUp">
+    <RemoveDir Directories="bin;obj;Presentation\SeparateViewsAssembly\obj" />
+    <Delete Files="$(SolutionNameWithPath).suo" />
+  </Target>
+</Project>

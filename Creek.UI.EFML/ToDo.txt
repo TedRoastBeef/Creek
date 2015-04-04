@@ -1,0 +1,25 @@
+﻿implement table element
+implement speach input-element
+implement grid control
+implement multipanel control+
+implement more exception handling
+
+(implement strings like on android @string/key)
+
+implement create own Elements
+
+implement body css selector
+
+continue style property
+
+implement controlprovider-creator
+implement efml designer
+
+implement splitbutton element
+implement progress element
+implement map element
+
+implement control to uielement
+
+implement add control with js
+implement window-object:

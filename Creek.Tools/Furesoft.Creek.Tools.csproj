@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C5DE7E22-9684-4BE6-8A61-D4E06642A96F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Creek.Tools</RootNamespace>
+    <AssemblyName>Furesoft.Creek.Tools</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API.cs" />
+    <Compile Include="Array.cs" />
+    <Compile Include="BinaryExtensions.cs" />
+    <Compile Include="Buffer.cs" />
+    <Compile Include="ByteBuffer.cs" />
+    <Compile Include="BitMatrix.cs" />
+    <Compile Include="CommandDesignPattern.cs" />
+    <Compile Include="Iterator.cs" />
+    <Compile Include="MultiFile.cs" />
+    <Compile Include="ControlMoverOrResizer.cs" />
+    <Compile Include="Date.cs" />
+    <Compile Include="DependencyContainer.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="DelayedCall.cs" />
+    <Compile Include="EventAggregator.cs" />
+    <Compile Include="Functions.cs" />
+    <Compile Include="IEnumerableExtensions.cs" />
+    <Compile Include="Internal\Binary\Binary.cs" />
+    <Compile Include="Internal\Binary\BinaryRuntime.cs" />
+    <Compile Include="Internal\Binary\BinaryTypes\BigInteger.cs" />
+    <Compile Include="Internal\Binary\BinaryTypes\Color.cs" />
+    <Compile Include="Internal\Binary\BinaryTypes\DateTime.cs" />
+    <Compile Include="Internal\Binary\BinaryTypes\Image.cs" />
+    <Compile Include="Internal\Binary\BinaryTypes\MemoryStream.cs" />
+    <Compile Include="Internal\Binary\BinaryTypes\Point.cs" />
+    <Compile Include="Internal\Binary\BinaryTypes\Size.cs" />
+    <Compile Include="Internal\Binary\Extensions.cs" />
+    <Compile Include="Internal\Binary\Reader.cs" />
+    <Compile Include="Internal\Binary\TypeBinaryDict.cs" />
+    <Compile Include="Internal\Binary\Types\BigInteger.cs" />
+    <Compile Include="Internal\Binary\Utils.cs" />
+    <Compile Include="Internal\Binary\Writer.cs" />
+    <Compile Include="KeyFile.cs" />
+    <Compile Include="LazySingleton.cs" />
+    <Compile Include="MP3Helper.cs" />
+    <Compile Include="NativeDll.cs" />
+    <Compile Include="Number.cs" />
+    <Compile Include="Object.cs" />
+    <Compile Include="ObjectBuilder.cs" />
+    <Compile Include="Ping.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyBag.cs" />
+    <Compile Include="PropertyCopy.cs" />
+    <Compile Include="Prototype.cs" />
+    <Compile Include="Random.cs" />
+    <Compile Include="Range.cs" />
+    <Compile Include="RegexCompiler.cs" />
+    <Compile Include="SingleProgramInstance.cs" />
+    <Compile Include="Singleton.cs" />
+    <Compile Include="SystemSound.cs" />
+    <Compile Include="Taskbar.cs" />
+    <Compile Include="TypeBuilder\AbstractTypeImplementer.cs" />
+    <Compile Include="TypeBuilder\AbstractTypeImplementers\NotifyPropertyChangedImplementer.cs" />
+    <Compile Include="TypeBuilder\Blocks\FluentBlockBuilder.cs" />
+    <Compile Include="TypeBuilder\Blocks\FluentBodyBuilder.cs" />
+    <Compile Include="TypeBuilder\Blocks\FluentCatchBuilder.cs" />
+    <Compile Include="TypeBuilder\Blocks\FluentElseBuilder.cs" />
+    <Compile Include="TypeBuilder\Blocks\FluentFinallyBuilder.cs" />
+    <Compile Include="TypeBuilder\Blocks\FluentForBuilder.cs" />
+    <Compile Include="TypeBuilder\Blocks\FluentIfBuilder.cs" />
+    <Compile Include="TypeBuilder\Blocks\FluentLoopBuilder.cs" />
+    <Compile Include="TypeBuilder\Blocks\FluentTryBuilder.cs" />
+    <Compile Include="TypeBuilder\Blocks\FluentUsingBuilder.cs" />
+    <Compile Include="TypeBuilder\Blocks\FluentWhileBuilder.cs" />
+    <Compile Include="TypeBuilder\FluentEventBuilder.cs" />
+    <Compile Include="TypeBuilder\FluentExpression.cs" />
+    <Compile Include="TypeBuilder\FluentMethodBuilder.cs" />
+    <Compile Include="TypeBuilder\FluentParameterKind.cs" />
+    <Compile Include="TypeBuilder\FluentPropertyBuilder.cs" />
+    <Compile Include="TypeBuilder\FluentTypeBuilder.cs" />
+    <Compile Include="TypeBuilder\NotifyPropertyChangedGenerator.cs" />
+    <Compile Include="TypeBuilder\_Expression.cs" />
+    <Compile Include="TypeBuilder\_IBlockBuilder.cs" />
+    <Compile Include="TypeBuilder\_ICompilable.cs" />
+    <Compile Include="TypeBuilder\_IFluentTypeBuilder.cs" />
+    <Compile Include="TypeBuilder\_ILoop.cs" />
+    <Compile Include="TypeBuilder\_Visitor.cs" />
+    <Compile Include="UndoRedo\Change.cs" />
+    <Compile Include="UndoRedo\Collections\Generic\UndoRedoDictionary.cs" />
+    <Compile Include="UndoRedo\Collections\Generic\UndoRedoList.cs" />
+    <Compile Include="UndoRedo\Command.cs" />
+    <Compile Include="UndoRedo\IUndoRedoMember.cs" />
+    <Compile Include="UndoRedo\UndoRedoManager.cs" />
+    <Compile Include="UndoRedo\UndoRedoProperty.cs" />
+    <Compile Include="VCard\vCard.cs" />
+    <Compile Include="VCard\vCardAccessClassification.cs" />
+    <Compile Include="VCard\vCardCertificate.cs" />
+    <Compile Include="VCard\vCardCertificateCollection.cs" />
+    <Compile Include="VCard\vCardCollection.cs" />
+    <Compile Include="VCard\vCardDeliveryAddress.cs" />
+    <Compile Include="VCard\vCardDeliveryAddressCollection.cs" />
+    <Compile Include="VCard\vCardDeliveryAddressTypes.cs" />
+    <Compile Include="VCard\vCardDeliveryLabel.cs" />
+    <Compile Include="VCard\vCardDeliveryLabelCollection.cs" />
+    <Compile Include="VCard\vCardEmailAddress.cs" />
+    <Compile Include="VCard\vCardEmailAddressCollection.cs" />
+    <Compile Include="VCard\vCardEmailAddressType.cs" />
+    <Compile Include="VCard\vCardEncoding.cs" />
+    <Compile Include="VCard\vCardException.cs" />
+    <Compile Include="VCard\vCardFormat.cs" />
+    <Compile Include="VCard\vCardGender.cs" />
+    <Compile Include="VCard\vCardNote.cs" />
+    <Compile Include="VCard\vCardNoteCollection.cs" />
+    <Compile Include="VCard\vCardPhone.cs" />
+    <Compile Include="VCard\vCardPhoneCollection.cs" />
+    <Compile Include="VCard\vCardPhoneTypes.cs" />
+    <Compile Include="VCard\vCardPhoto.cs" />
+    <Compile Include="VCard\vCardPhotoCollection.cs" />
+    <Compile Include="VCard\vCardProperty.cs" />
+    <Compile Include="VCard\vCardPropertyCollection.cs" />
+    <Compile Include="VCard\vCardReader.cs" />
+    <Compile Include="VCard\vCardSource.cs" />
+    <Compile Include="VCard\vCardSourceCollection.cs" />
+    <Compile Include="VCard\vCardStandardReader.cs" />
+    <Compile Include="VCard\vCardStandardWriter.cs" />
+    <Compile Include="VCard\vCardStandardWriterOptions.cs" />
+    <Compile Include="VCard\vCardSubproperty.cs" />
+    <Compile Include="VCard\vCardSubpropertyCollection.cs" />
+    <Compile Include="VCard\vCardValueCollection.cs" />
+    <Compile Include="VCard\vCardWebsite.cs" />
+    <Compile Include="VCard\vCardWebsiteCollection.cs" />
+    <Compile Include="VCard\vCardWebsiteTypes.cs" />
+    <Compile Include="VCard\vCardWriter.cs" />
+    <Compile Include="VCard\WarningMessages.Designer.cs" />
+    <Compile Include="Wallet.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VCard\WarningMessages.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Creek.Drawing\Furesoft.Creek.Drawing.csproj">
+      <Project>{529C2979-CE79-4499-820D-11DA96DBA280}</Project>
+      <Name>Furesoft.Creek.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Creek.Text\Furesoft.Creek.Text.csproj">
+      <Project>{83098449-2479-417D-A413-7E2A3E9A3C3B}</Project>
+      <Name>Furesoft.Creek.Text</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

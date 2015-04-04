@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{254D6834-899E-4DEB-B349-0DC7903FE304}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Creek.MVP</RootNamespace>
+    <AssemblyName>Furesoft.Creek.MVP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\CreateHelper.cs" />
+    <Compile Include="Configuration\MVCConfiguration.cs" />
+    <Compile Include="Configuration\Tasks\AdjacentPointsAttribute.cs" />
+    <Compile Include="Configuration\Tasks\DefaultTaskInfoProvider.cs" />
+    <Compile Include="Configuration\Tasks\InteractionPointAttribute.cs" />
+    <Compile Include="Configuration\Tasks\InteractionPointInfo.cs" />
+    <Compile Include="Configuration\Tasks\InteractionPointInfoCollection.cs" />
+    <Compile Include="Configuration\Tasks\ITaskInfoProvider.cs" />
+    <Compile Include="Configuration\Tasks\NavTargetAttribute.cs" />
+    <Compile Include="Configuration\Tasks\TaskAttribute.cs" />
+    <Compile Include="Configuration\Tasks\TaskInfo.cs" />
+    <Compile Include="Configuration\Tasks\TaskInfoByAttributesProvider.cs" />
+    <Compile Include="Configuration\Tasks\TaskInfoByXmlAttributeProvider.cs" />
+    <Compile Include="Configuration\Tasks\TaskInfoCollection.cs" />
+    <Compile Include="Configuration\Tasks\TaskInfoProviderBase.cs" />
+    <Compile Include="Configuration\Views\DefaultViewInfosProvider.cs" />
+    <Compile Include="Configuration\Views\IViewInfosProvider.cs" />
+    <Compile Include="Configuration\Views\ViewAttribute.cs" />
+    <Compile Include="Configuration\Views\ViewCreationException.cs" />
+    <Compile Include="Configuration\Views\ViewInfo.cs" />
+    <Compile Include="Configuration\Views\ViewInfoCollection.cs" />
+    <Compile Include="Configuration\Views\ViewInfoNotFoundException.cs" />
+    <Compile Include="Configuration\Views\ViewInfosByTaskCollection.cs" />
+    <Compile Include="Configuration\WinformsViewAttribute.cs" />
+    <Compile Include="Configuration\WinformsViewInfo.cs" />
+    <Compile Include="Configuration\WinformsViewInfosProvider.cs" />
+    <Compile Include="ControllerBase.cs" />
+    <Compile Include="ControllerBaseGeneric.cs" />
+    <Compile Include="IController.cs" />
+    <Compile Include="IControllerGeneric.cs" />
+    <Compile Include="Navigator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StubNavigator.cs" />
+    <Compile Include="Tasks\ITask.cs" />
+    <Compile Include="Tasks\TaskBase.cs" />
+    <Compile Include="Tasks\TasksManager.cs" />
+    <Compile Include="Views\INotifiedView.cs" />
+    <Compile Include="Views\IView.cs" />
+    <Compile Include="Views\IViewGeneric.cs" />
+    <Compile Include="Views\IViewsManager.cs" />
+    <Compile Include="Views\ViewsManagerBase.cs" />
+    <Compile Include="WinformsViewsManager.cs" />
+    <Compile Include="WinFormView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormViewGeneric.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinUserControlView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WinUserControlViewGeneric.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

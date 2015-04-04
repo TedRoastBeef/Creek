@@ -1,0 +1,12 @@
+﻿* Add Convert support
+
+* implement more error handling
+
+* add a function to use .net functions
+
+* add class support
+
+* add system functions
+
+* add variable support for functions 
+  ** alert(@varname);

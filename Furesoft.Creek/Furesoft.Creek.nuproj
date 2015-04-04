@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>430ccc96-c462-4ceb-8849-c5249ad88fcd</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NuProjPath Condition=" '$(NuProjPath)' == '' ">$(MSBuildExtensionsPath)\NuProj\</NuProjPath>
+  </PropertyGroup>
+  <Import Project="$(NuProjPath)\NuProj.props" Condition="Exists('$(NuProjPath)\NuProj.props')" />
+  <PropertyGroup Label="Configuration">
+    <Id>Furesoft.Creek</Id>
+    <Version>1.0.0</Version>
+    <Title>Furesoft.Creek</Title>
+    <Authors>Furesoft</Authors>
+    <Owners>Furesoft</Owners>
+    <Summary>Furesoft.Creek</Summary>
+    <Description>Furesoft.Creek</Description>
+    <ReleaseNotes>
+    </ReleaseNotes>
+    <ProjectUrl>
+    </ProjectUrl>
+    <LicenseUrl>
+    </LicenseUrl>
+    <Copyright>Copyright © Furesoft</Copyright>
+    <Tags>Furesoft.Creek</Tags>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Creek.Behaviors\Creek.Behaviors.csproj" />
+    <ProjectReference Include="..\Creek.Diagnostics\Creek.Diagnostics.csproj" />
+    <ProjectReference Include="..\Creek.Drawing\Creek.Drawing.csproj" />
+    <ProjectReference Include="..\Creek.Dynamics\Creek.Dynamics.csproj" />
+    <ProjectReference Include="..\Creek.Extensions\Creek.Extensions.csproj" />
+    <ProjectReference Include="..\Creek.Fonts\Creek.Library.Fonts.csproj" />
+    <ProjectReference Include="..\Creek.I18N.Gettext\Creek.I18N.Gettext.csproj" />
+    <ProjectReference Include="..\Creek.I18N\Creek.I18N.csproj" />
+    <ProjectReference Include="..\Creek.Info\Creek.Info.csproj" />
+    <ProjectReference Include="..\Creek.Macro\Creek.Macros.csproj" />
+    <ProjectReference Include="..\Creek.Messaging\Creek.Messaging.csproj" />
+    <ProjectReference Include="..\Creek.Net.Updates\Creek.Net.Updates.csproj" />
+    <ProjectReference Include="..\Creek.Net\Creek.Net.csproj" />
+    <ProjectReference Include="..\Creek.Plugins\Creek.Extensibility.Plugins.csproj" />
+    <ProjectReference Include="..\Creek.Resources\Creek.Resources.csproj" />
+    <ProjectReference Include="..\Creek.Security.USBKeys\Creek.Security.USBKeys.csproj" />
+    <ProjectReference Include="..\Creek.Security\Creek.Security.csproj" />
+    <ProjectReference Include="..\Creek.Serialize\Creek.Serialize.csproj" />
+    <ProjectReference Include="..\Creek.Template\Creek.Template.csproj" />
+    <ProjectReference Include="..\Creek.Text\Creek.Text.csproj" />
+    <ProjectReference Include="..\Creek.Tools.Hacking\Creek.Tools.Hacking.csproj" />
+    <ProjectReference Include="..\Creek.Tools\Creek.Tools.csproj" />
+    <ProjectReference Include="..\Creek.Validation\Creek.Validation.csproj" />
+  </ItemGroup>
+  <Import Project="$(NuProjPath)\NuProj.targets" />
+</Project>

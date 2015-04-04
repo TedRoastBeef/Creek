@@ -1,0 +1,157 @@
+IMPLEMENTED		COMMANDS:               TEXTPAD KEYS:
+
+no				ActivateClipLib         Alt+0                   
+no				ActivateSelector        Alt+1                      
+no				BookmarkClearAll        Strg+Umschalt+F2             
+no				BookmarkNext            F2                      
+no				BookmarkPrev            Umschalt+F2             
+no				BookmarkToggle          Strg+F2                                      
+yes				CharLeft                Nach-links              
+yes				CharLeftExtend          Umschalt+Nach-links     
+yes				CharRight               Nach-rechts             
+yes				CharRightExtend         Umschalt+Nach-rechts    
+yes				DocumentEnd             Strg+Ende               
+yes				DocumentEndExtend       Strg+Umschalt+Ende      
+yes				DocumentStart           Strg+Pos1               
+yes				DocumentStartExtend     Strg+Umschalt+Pos1      
+no				EditAlignCenter         Strg+E                  
+no				EditAlignRight          Strg+Umschalt+E         
+yes				EditBackspace           Strg+H                  Rück                    Umschalt+Rück           
+no				EditCapitalize          Strg+Umschalt+U         
+yes				EditClearAll            Alt+Entf                
+yes				EditCopy                Strg+C                  Strg+Einfg              
+TODO			EditCopyAppend          Strg+Umschalt+C         
+yes				EditCut                 Umschalt+Entf           Strg+X                  
+TODO			EditCutAppend           Strg+Umschalt+X         
+yes				EditDelete              Entf                    
+yes				EditDelLineEnd          Strg+Umschalt+Entf      
+yes				EditDelWordLeft         Strg+Rück               
+yes				EditDelWordRight        Strg+Entf               
+yes				EditIndentLess          Strg+Umschalt+I         
+yes				EditIndentMore          Strg+I                  
+no				EditInsertFile          Strg+Umschalt+V         
+yes				EditInvertCase          Strg+K                  
+yes				EditJoinLines           Strg+J
+TODO			EditLowerCase           Strg+L                  
+TODO			EditNewLineAfter        Strg+Eingabe            
+TODO			EditNewLineBefore       Strg+Umschalt+Eingabe   
+no				EditPageBreak           Strg+Umschalt+L         
+yes				EditPaste               Strg+V                  Umschalt+Einfg          
+no				EditPopupContext        Apps                    Umschalt+F10            
+no				EditPopupDateTime       Strg+F10                
+yes				EditRedo                Strg+Y                  
+TODO			EditRedoAll             Strg+Umschalt+Y         
+no				EditReformat            Strg+Umschalt+J         
+no				EditSentenceCase        Strg+Umschalt+K         
+no				EditSplitLines          Strg+Alt+J
+TODO			EditTranspose           Strg+T                  
+no				EditTransposeWords      Strg+Umschalt+T         
+yes				EditUndo                Strg+Z                  
+TODO			EditUndoAll             Strg+Umschalt+Z         
+TODO			EditUpperCase           Strg+U                  
+no				FileGoTo                Strg+Umschalt+G         
+no				FileManage              F3                      
+TODO			FileNew                 Strg+N                  
+TODO			FileOpen                Strg+O                  
+no				FilePrint               Strg+P                  
+no				FilePrintPreview        Strg+Umschalt+P         
+no				FileQuickOpen           Strg+Umschalt+O         
+TODO			FileSave                Strg+S                  
+TODO			FileSaveAll             Strg+Umschalt+S         
+TODO			FileSaveAs              F12                     
+no				FileStatistics          Strg+F1                 
+no				Help                    F1                      
+no				Java kompilieren        Strg+1                  
+no				Java-Applet starten     Strg+3                  
+no				Java-Programm starten   Strg+2                  
+yes				LineDown                Nach-unten              
+yes				LineDownExtend          Umschalt+Nach-unten     
+yes				LineEnd                 Ende                    
+yes				LineEndExtend           Umschalt+Ende            
+yes				LineScrollDown          Strg+Nach-oben          
+yes				LineScrollUp            Strg+Nach-unten         
+yes				LineStart               Pos1                    
+yes				LineStartExtend         Umschalt+Pos1           
+yes				LineUp                  Nach-oben               
+yes				LineUpExtend            Umschalt+Nach-oben      
+no				MacroMultiplay          Strg+F7                 
+no				MacroPlay               Strg+R                  
+no				MacroRecord             Strg+Umschalt+R         
+TODO			MatchBracket            Strg+M                  
+TODO			MatchBracketExtend      Strg+Umschalt+M            
+yes 			PageDown                Bild-nach-unten         
+yes				PageDownExtend          Umschalt+Bild-nach-unten
+TODO			PageLeft                Strg+Bild-nach-oben     
+TODO			PageLeftExtend          Strg+Umschalt+Bild-nach-oben
+TODO			PageRight               Strg+Bild-nach-unten    
+TODO			PageRightExtend         Strg+Umschalt+Bild-nach-unten
+yes 			PageUp                  Bild-nach-oben          
+yes				PageUpExtend            Umschalt+Bild-nach-oben 
+no				ParaDown                Alt+Nach-unten          
+no				ParaDownExtend          Umschalt+Alt+Nach-unten 
+no				ParaUp                  Alt+Nach-oben           
+no				ParaUpExtend            Umschalt+Alt+Nach-oben  
+no				Preferences             Strg+Q, P               
+no				RightMarginSet          Strg+Q, R               
+no				SearchFiles             Strg+F5                 
+no				SearchFind              F5                      
+no				SearchFindNext          Strg+F                  
+no				SearchFindPrevious      Strg+Umschalt+F         
+no				SearchGoto              Strg+G                  
+no				SearchJumpNext          F4                      
+no				SearchJumpPrev          Umschalt+F4             
+no				SearchReplace           F8                      
+no				SearchReplaceNext       Strg+F8                 
+yes				SelectAll               Strg+A                  
+no				SelectBeginStream       Strg+Q, S               
+no				ToggleBlockSelect       Strg+Q, B               
+yes				ToggleInsertMode        Einfg                   
+no				ToggleReadOnly          Strg+Q, E               
+no				ToggleSyncScroll        Strg+Q, Y               
+no				ToggleUndo              Strg+Q, U               
+no				ToggleWordWrap          Strg+Q, W               
+no				Tool04                  Strg+4                  
+no				Tool05                  Strg+5                  
+no				Tool06                  Strg+6                  
+no				Tool07                  Strg+7                  
+no				Tool08                  Strg+8                  
+no				Tool09                  Strg+9                  
+no				ToolCompareFiles        Strg+F9                 
+no				ToolExplorer            Alt+F3                  
+no				ToolHTMLValidate        Strg+0                  
+no				ToolSort                F9                      
+no				ToolSpell               F7                      
+no				ToolStop                Strg+Abbrechen          
+no				ViewClipLib             Strg+F3                 
+no				ViewDocSelector         F11                     
+yes				ViewEnd                 Alt+Ende                
+TODO			ViewHScrollbar          Strg+Q, H               
+TODO			ViewLineNumbers         Strg+Q, L               
+TODO			ViewProperties          Strg+Apps               Alt+Eingabe             
+yes				ViewStart               Alt+Pos1                
+TODO			ViewVisibleSpaces       Strg+Q, I               
+TODO			ViewVScrollbar          Strg+Q, V               
+no				Window1                 Strg+1 (ZEHNERTASTATUR) 
+no				Window10                Strg+0 (ZEHNERTASTATUR) 
+no				Window2                 Strg+2 (ZEHNERTASTATUR) 
+no				Window3                 Strg+3 (ZEHNERTASTATUR) 
+no				Window4                 Strg+4 (ZEHNERTASTATUR) 
+no				Window5                 Strg+5 (ZEHNERTASTATUR) 
+no				Window6                 Strg+6 (ZEHNERTASTATUR) 
+no				Window7                 Strg+7 (ZEHNERTASTATUR) 
+no				Window8                 Strg+8 (ZEHNERTASTATUR) 
+no				Window9                 Strg+9 (ZEHNERTASTATUR) 
+no				WindowCommand           Strg+F11                
+no				WindowNext              Strg+Tabulator          
+no				WindowPaneNext          F6                      
+no				WindowPanePrev          Umschalt+F6             
+no				WindowPrev              Strg+Umschalt+Tabulator 
+no				WindowSearch            Umschalt+F11            
+yes				WordLeft                Strg+B                  Strg+Nach-links         
+no				WordLeftEnd             Strg+D                  
+no				WordLeftEndExtend       Strg+Umschalt+D         
+yes				WordLeftExtend          Strg+Umschalt+B         Strg+Umschalt+Nach-links
+yes				WordRight               Strg+Nach-rechts        Strg+W                  
+yes				WordRightExtend         Strg+Umschalt+Nach-rechts	Strg+Umschalt+W         
+
+TODO: Clear undo / redo on save

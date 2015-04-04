@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>627957be-969e-4407-86c1-d23682112ba2</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NuProjPath Condition=" '$(NuProjPath)' == '' ">$(MSBuildExtensionsPath)\NuProj\</NuProjPath>
+  </PropertyGroup>
+  <Import Project="$(NuProjPath)\NuProj.props" Condition="Exists('$(NuProjPath)\NuProj.props')" />
+  <PropertyGroup Label="Configuration">
+    <Id>Furesoft.Creek.Data</Id>
+    <Version>1.0.0</Version>
+    <Title>Furesoft.Creek.Data</Title>
+    <Authors>Furesoft</Authors>
+    <Owners>Furesoft</Owners>
+    <Summary>Furesoft.Creek.Data</Summary>
+    <Description>Furesoft.Creek.Data</Description>
+    <ReleaseNotes>
+    </ReleaseNotes>
+    <ProjectUrl>
+    </ProjectUrl>
+    <LicenseUrl>
+    </LicenseUrl>
+    <Copyright>Copyright © Furesoft</Copyright>
+    <Tags>Furesoft.Creek.Data</Tags>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Creek.Data.JSON\Creek.Data.JSON.csproj" />
+    <ProjectReference Include="..\Creek.Data.Logging\Creek.Data.Logging.csproj" />
+    <ProjectReference Include="..\Creek.Data.Registry\Creek.Data.Registry.csproj" />
+    <ProjectReference Include="..\Creek.IO.Data.Storage\Creek.Data.Storage.csproj" />
+    <ProjectReference Include="..\Creek.IO.Data.VFS\Creek.Data.VFS.csproj" />
+    <ProjectReference Include="..\Creek.IO.Database\Creek.Database.csproj" />
+  </ItemGroup>
+  <Import Project="$(NuProjPath)\NuProj.targets" />
+</Project>

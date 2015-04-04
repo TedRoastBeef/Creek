@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8B66C030-5F14-44AD-9A0A-4919B7F8853C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Test</RootNamespace>
+    <AssemblyName>Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <LangVersion>3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Test.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CalculatorParser\Nonterminals\CalculatorNonterminal.cs" />
+    <Compile Include="CalculatorParser\Nonterminals\Expression.cs" />
+    <Compile Include="CalculatorParser\Nonterminals\ExpressionOperator.cs" />
+    <Compile Include="CalculatorParser\Nonterminals\Factor.cs" />
+    <Compile Include="CalculatorParser\Nonterminals\Start.cs" />
+    <Compile Include="CalculatorParser\Nonterminals\Term.cs" />
+    <Compile Include="CalculatorParser\Nonterminals\TermOperator.cs" />
+    <Compile Include="CalculatorParser\Nonterminals\UnaryOperator.cs" />
+    <Compile Include="CalculatorParser\Terminals\CalculatorTerminal.cs" />
+    <Compile Include="CalculatorParser\Terminals\Number.cs" />
+    <Compile Include="CalculatorParser\Terminals\OperatorAddition.cs" />
+    <Compile Include="CalculatorParser\Terminals\OperatorAssignment.cs" />
+    <Compile Include="CalculatorParser\Terminals\OperatorDivision.cs" />
+    <Compile Include="CalculatorParser\Terminals\OperatorMultiplication.cs" />
+    <Compile Include="CalculatorParser\Terminals\OperatorSubtraction.cs" />
+    <Compile Include="CalculatorParser\Terminals\ParenthesisClose.cs" />
+    <Compile Include="CalculatorParser\Terminals\ParenthesisOpen.cs" />
+    <Compile Include="CalculatorParser\Terminals\Variable.cs" />
+    <Compile Include="CalculatorParser\Terminals\Whitespace.cs" />
+    <Compile Include="CodeWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodeWindow.Designer.cs">
+      <DependentUpon>CodeWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HTML.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HTML.Designer.cs">
+      <DependentUpon>HTML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestPage2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListCombo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Map.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Map.Designer.cs">
+      <DependentUpon>Map.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestCombo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Numbers.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CodeWindow.resx">
+      <DependentUpon>CodeWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HTML.resx">
+      <DependentUpon>HTML.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestPage2.resx">
+      <DependentUpon>TestPage2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListCombo.resx">
+      <DependentUpon>ListCombo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Map.resx">
+      <DependentUpon>Map.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TestCombo.resx">
+      <DependentUpon>TestCombo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestPage.resx">
+      <DependentUpon>TestPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Creek.Behaviors\Furesoft.Creek.Behaviors.csproj">
+      <Project>{78530F40-6973-4702-8A0B-7C98BE6A1A67}</Project>
+      <Name>Furesoft.Creek.Behaviors</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Creek.Contracts\Furesoft.Creek.Contracts.csproj">
+      <Project>{539CFD64-3471-45A3-BC46-9515C09A826E}</Project>
+      <Name>Furesoft.Creek.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Creek.Dynamics\Furesoft.Creek.Dynamics.csproj">
+      <Project>{E455BA79-D680-4D5B-924E-CF54D43D7349}</Project>
+      <Name>Furesoft.Creek.Dynamics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Creek.Extensions\Furesoft.Creek.Extensions.csproj">
+      <Project>{4A762EE7-C4D0-484A-BC46-380341817B80}</Project>
+      <Name>Furesoft.Creek.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Creek.Fonts\Furesoft.Creek.Library.Fonts.csproj">
+      <Project>{C396B00F-161B-4E76-9BCE-51DC6AF77469}</Project>
+      <Name>Furesoft.Creek.Library.Fonts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Creek.IO.Binary\Furesoft.Creek.IO.Binary.csproj">
+      <Project>{F55DE8AC-38BF-45BE-BCA5-AAD35BD2F71E}</Project>
+      <Name>Furesoft.Creek.IO.Binary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Creek.IO.Data.VFS\Furesoft.Creek.Data.VFS.csproj">
+      <Project>{CEE8E2FB-76A3-4172-B55C-847178501331}</Project>
+      <Name>Furesoft.Creek.Data.VFS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Creek.IO\Furesoft.Creek.IO.csproj">
+      <Project>{DB6888D4-A73E-47B3-A727-65CB5F6FE4D2}</Project>
+      <Name>Furesoft.Creek.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Creek.Messaging\Furesoft.Creek.Messaging.csproj">
+      <Project>{69715B06-BFF4-4457-BD25-B67C00CDC36E}</Project>
+      <Name>Furesoft.Creek.Messaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Creek.Net\Furesoft.Creek.Net.csproj">
+      <Project>{CA94D097-C7AE-41DF-958D-93D2AEB0CDBC}</Project>
+      <Name>Furesoft.Creek.Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Creek.Parsers\Furesoft.Creek.Parsers.csproj">
+      <Project>{A87EFA3C-BBAF-46B9-BCCB-84F6F90A0E77}</Project>
+      <Name>Furesoft.Creek.Parsers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Creek.Parsing\Furesoft.Creek.Parsing.csproj">
+      <Project>{24FDF059-F72A-43E4-8921-138D240DF8BC}</Project>
+      <Name>Furesoft.Creek.Parsing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Creek.Security.USBKeys\Furesoft.Creek.Security.USBKeys.csproj">
+      <Project>{65A43831-540B-46BE-A808-387260EE48ED}</Project>
+      <Name>Furesoft.Creek.Security.USBKeys</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Creek.Text\Furesoft.Creek.Text.csproj">
+      <Project>{83098449-2479-417D-A413-7E2A3E9A3C3B}</Project>
+      <Name>Furesoft.Creek.Text</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Creek.Tools\Furesoft.Creek.Tools.csproj">
+      <Project>{C5DE7E22-9684-4BE6-8A61-D4E06642A96F}</Project>
+      <Name>Furesoft.Creek.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Creek.UI.Effects\Furesoft.Creek.UI.Winforms.Effects.csproj">
+      <Project>{B42912FC-79B2-4007-977B-2171BA4C8A20}</Project>
+      <Name>Furesoft.Creek.UI.Winforms.Effects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Creek.UI.EFML\Furesoft.Creek.UI.Winforms.EFML.csproj">
+      <Project>{43216F34-E90E-4CAD-BE77-0EE3AA59183A}</Project>
+      <Name>Furesoft.Creek.UI.Winforms.EFML</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Creek.UI\Furesoft.Creek.UI.Winforms.csproj">
+      <Project>{1AA4CEF5-9AF2-4C44-81B7-9EF1F3F662C3}</Project>
+      <Name>Furesoft.Creek.UI.Winforms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ich.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

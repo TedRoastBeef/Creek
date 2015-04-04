@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{24FDF059-F72A-43E4-8921-138D240DF8BC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Creek.Parsing</RootNamespace>
+    <AssemblyName>Furesoft.Creek.Parsing</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Eto\FluentExtensions.cs" />
+    <Compile Include="Eto\Grammar.cs" />
+    <Compile Include="Eto\GrammarMatch.cs" />
+    <Compile Include="Eto\Grammars\BnfGrammar.cs" />
+    <Compile Include="Eto\Grammars\Custom\AddressGrammar.cs" />
+    <Compile Include="Eto\Grammars\Custom\Json\JsonGrammar.cs" />
+    <Compile Include="Eto\Grammars\Custom\Json\JsonTokens.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\Encodings\BoldEncoding.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\Encodings\BreakEncoding.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\Encodings\CodeEncoding.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\Encodings\EscapeEncoding.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\Encodings\HtmlEncoding.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\Encodings\ItalicEncoding.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\Encodings\LinkEncoding.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\Extensions.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\HtmlElementParser.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\MarkdownEncoding.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\MarkdownGrammar.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\MarkdownReplacement.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\ReplacementParser.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\Sections\BlockQuoteSection.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\Sections\CodeSection.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\Sections\DoubleLineHeaderSection.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\Sections\HeaderSection.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\Sections\HrSection.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\Sections\HtmlSection.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\Sections\ListSection.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\Sections\ParagraphSection.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\Sections\ReferenceSection.cs" />
+    <Compile Include="Eto\Grammars\Custom\Markdown\Terms.cs" />
+    <Compile Include="Eto\Grammars\Custom\XmlGrammar.cs" />
+    <Compile Include="Eto\Grammars\EbnfGrammar.cs" />
+    <Compile Include="Eto\Grammars\GoldDefinition.cs" />
+    <Compile Include="Eto\Grammars\GoldGrammar.cs" />
+    <Compile Include="Eto\InternalExtensions.cs" />
+    <Compile Include="Eto\InverseParser.cs" />
+    <Compile Include="Eto\ISeparatedParser.cs" />
+    <Compile Include="Eto\ListParser.cs" />
+    <Compile Include="Eto\Match.cs" />
+    <Compile Include="Eto\ParseArgs.cs" />
+    <Compile Include="Eto\Parser.cs" />
+    <Compile Include="Eto\Parser.operators.cs" />
+    <Compile Include="Eto\ParserChain.cs" />
+    <Compile Include="Eto\ParserChildrenArgs.cs" />
+    <Compile Include="Eto\ParserCloneArgs.cs" />
+    <Compile Include="Eto\ParserContainsArgs.cs" />
+    <Compile Include="Eto\ParserFindArgs.cs" />
+    <Compile Include="Eto\ParserInitializeArgs.cs" />
+    <Compile Include="Eto\Parsers\AlternativeParser.cs" />
+    <Compile Include="Eto\Parsers\AnyCharTerminal.cs" />
+    <Compile Include="Eto\Parsers\AnySurrogatePairTerminal.cs" />
+    <Compile Include="Eto\Parsers\BooleanTerminal.cs" />
+    <Compile Include="Eto\Parsers\CharRangeTerminal.cs" />
+    <Compile Include="Eto\Parsers\CharSetTerminal.cs" />
+    <Compile Include="Eto\Parsers\CharTerminal.cs" />
+    <Compile Include="Eto\Parsers\ControlTerminal.cs" />
+    <Compile Include="Eto\Parsers\DigitTerminal.cs" />
+    <Compile Include="Eto\Parsers\EmptyParser.cs" />
+    <Compile Include="Eto\Parsers\EndParser.cs" />
+    <Compile Include="Eto\Parsers\EolTerminal.cs" />
+    <Compile Include="Eto\Parsers\ExceptParser.cs" />
+    <Compile Include="Eto\Parsers\GroupParser.cs" />
+    <Compile Include="Eto\Parsers\HexDigitTerminal.cs" />
+    <Compile Include="Eto\Parsers\LetterOrDigitTerminal.cs" />
+    <Compile Include="Eto\Parsers\LetterTerminal.cs" />
+    <Compile Include="Eto\Parsers\LiteralTerminal.cs" />
+    <Compile Include="Eto\Parsers\LookAheadParser.cs" />
+    <Compile Include="Eto\Parsers\NumberParser.cs" />
+    <Compile Include="Eto\Parsers\OptionalParser.cs" />
+    <Compile Include="Eto\Parsers\PunctuationTerminal.cs" />
+    <Compile Include="Eto\Parsers\RepeatCharTerminal.cs" />
+    <Compile Include="Eto\Parsers\RepeatParser.cs" />
+    <Compile Include="Eto\Parsers\SequenceParser.cs" />
+    <Compile Include="Eto\Parsers\SingleCharTerminal.cs" />
+    <Compile Include="Eto\Parsers\SingleLineWhiteSpaceTerminal.cs" />
+    <Compile Include="Eto\Parsers\SingleSurrogatePairTerminal.cs" />
+    <Compile Include="Eto\Parsers\StartParser.cs" />
+    <Compile Include="Eto\Parsers\StringParser.cs" />
+    <Compile Include="Eto\Parsers\SurrogatePairRangeTerminal.cs" />
+    <Compile Include="Eto\Parsers\SurrogatePairTerminal.cs" />
+    <Compile Include="Eto\Parsers\SymbolTerminal.cs" />
+    <Compile Include="Eto\Parsers\UntilParser.cs" />
+    <Compile Include="Eto\Parsers\WhiteSpaceTerminal.cs" />
+    <Compile Include="Eto\ParserWriter.cs" />
+    <Compile Include="Eto\ParserWriterArgs.cs" />
+    <Compile Include="Eto\Scanner.cs" />
+    <Compile Include="Eto\Scanners\StringScanner.cs" />
+    <Compile Include="Eto\SlimStack.cs" />
+    <Compile Include="Eto\Terminals.cs" />
+    <Compile Include="Eto\TextParserWriter.cs" />
+    <Compile Include="Eto\TextParserWriterArgs.cs" />
+    <Compile Include="Eto\UnaryParser.cs" />
+    <Compile Include="Eto\Writers\CodeParserWriter.cs" />
+    <Compile Include="Eto\Writers\Code\BooleanWriter.cs" />
+    <Compile Include="Eto\Writers\Code\CharRangeWriter.cs" />
+    <Compile Include="Eto\Writers\Code\CharSetWriter.cs" />
+    <Compile Include="Eto\Writers\Code\CharWriter.cs" />
+    <Compile Include="Eto\Writers\Code\ExceptWriter.cs" />
+    <Compile Include="Eto\Writers\Code\GrammarWriter.cs" />
+    <Compile Include="Eto\Writers\Code\GroupWriter.cs" />
+    <Compile Include="Eto\Writers\Code\InverseWriter.cs" />
+    <Compile Include="Eto\Writers\Code\ListWriter.cs" />
+    <Compile Include="Eto\Writers\Code\LiteralWriter.cs" />
+    <Compile Include="Eto\Writers\Code\NumberWriter.cs" />
+    <Compile Include="Eto\Writers\Code\ParserWriter.cs" />
+    <Compile Include="Eto\Writers\Code\RepeatWriter.cs" />
+    <Compile Include="Eto\Writers\Code\SequenceWriter.cs" />
+    <Compile Include="Eto\Writers\Code\SingleCharWriter.cs" />
+    <Compile Include="Eto\Writers\Code\StringWriter.cs" />
+    <Compile Include="Eto\Writers\Code\UnaryWriter.cs" />
+    <Compile Include="Eto\Writers\DisplayParserWriter.cs" />
+    <Compile Include="Eto\Writers\Display\ListWriter.cs" />
+    <Compile Include="Eto\Writers\Display\LiteralWriter.cs" />
+    <Compile Include="Eto\Writers\Display\ParserWriter.cs" />
+    <Compile Include="Eto\Writers\Display\RepeatWriter.cs" />
+    <Compile Include="Eto\Writers\Display\UnaryWriter.cs" />
+    <Compile Include="Generator\FirstSet.cs" />
+    <Compile Include="Generator\FollowSet.cs" />
+    <Compile Include="Generator\GeneratorRuleItem.cs" />
+    <Compile Include="Generator\GeneratorState.cs" />
+    <Compile Include="Generator\GeneratorStateItem.cs" />
+    <Compile Include="Generator\Grammar.cs" />
+    <Compile Include="Generator\GrammarAttribute.cs" />
+    <Compile Include="Generator\IGrammar.cs" />
+    <Compile Include="Generator\IParser.cs" />
+    <Compile Include="Generator\IParserGenerator.cs" />
+    <Compile Include="Generator\ITerminalReader.cs" />
+    <Compile Include="Generator\ITerminalReaderGenerator.cs" />
+    <Compile Include="Generator\LanguageElement.cs" />
+    <Compile Include="Generator\LanguageElementType.cs" />
+    <Compile Include="Generator\LanguageElementTypes.cs" />
+    <Compile Include="Generator\LinguaTrace.cs" />
+    <Compile Include="Generator\Nonterminal.cs" />
+    <Compile Include="Generator\NonterminalAttribute.cs" />
+    <Compile Include="Generator\NonterminalType.cs" />
+    <Compile Include="Generator\OptionalNonterminal.cs" />
+    <Compile Include="Generator\OptionalTerminal.cs" />
+    <Compile Include="Generator\Parser.cs" />
+    <Compile Include="Generator\ParserAction.cs" />
+    <Compile Include="Generator\ParserActionAccept.cs" />
+    <Compile Include="Generator\ParserActionReduce.cs" />
+    <Compile Include="Generator\ParserActionShift.cs" />
+    <Compile Include="Generator\ParserActionTypes.cs" />
+    <Compile Include="Generator\ParserGenerator.cs" />
+    <Compile Include="Generator\ParserGeneratorParserConflict.cs" />
+    <Compile Include="Generator\ParserGeneratorResult.cs" />
+    <Compile Include="Generator\ParserStack.cs" />
+    <Compile Include="Generator\ParserStackItem.cs" />
+    <Compile Include="Generator\ParserState.cs" />
+    <Compile Include="Generator\RuleAttribute.cs" />
+    <Compile Include="Generator\RuleType.cs" />
+    <Compile Include="Generator\Terminal.cs" />
+    <Compile Include="Generator\TerminalAttribute.cs" />
+    <Compile Include="Generator\TerminalReader.cs" />
+    <Compile Include="Generator\TerminalReaderGenerator.cs" />
+    <Compile Include="Generator\TerminalReaderGeneratorResult.cs" />
+    <Compile Include="Generator\TerminalStop.cs" />
+    <Compile Include="Generator\TerminalType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RTF\Attributes\RtfControlGroupAttribute.cs" />
+    <Compile Include="RTF\Attributes\RtfControlWordAttribute.cs" />
+    <Compile Include="RTF\Attributes\RtfControlWordDenotingEndAttribute.cs" />
+    <Compile Include="RTF\Attributes\RtfEnclosingBracesAttribute.cs" />
+    <Compile Include="RTF\Attributes\RtfEnumAsControlWordAttribute.cs" />
+    <Compile Include="RTF\Attributes\RtfIgnoreAttribute.cs" />
+    <Compile Include="RTF\Attributes\RtfIncludeAttribute.cs" />
+    <Compile Include="RTF\Attributes\RtfIndexAttribute.cs" />
+    <Compile Include="RTF\Attributes\RtfTextDataAttribute.cs" />
+    <Compile Include="RTF\Contents\Paragraphs\RtfFormattedParagraph.cs" />
+    <Compile Include="RTF\Contents\Paragraphs\RtfParagraph.cs" />
+    <Compile Include="RTF\Contents\Paragraphs\RtfParagraphBase.cs" />
+    <Compile Include="RTF\Contents\Paragraphs\RtfParagraphCollection.cs" />
+    <Compile Include="RTF\Contents\Paragraphs\RtfParagraphContentsCollection.cs" />
+    <Compile Include="RTF\Contents\Paragraphs\RtfTab.cs" />
+    <Compile Include="RTF\Contents\Paragraphs\RtfTabCollection.cs" />
+    <Compile Include="RTF\Contents\RtfImage.cs" />
+    <Compile Include="RTF\Contents\RtfSpecialCharacter.cs" />
+    <Compile Include="RTF\Contents\Table\Collections\RtfTableCellCollection.cs" />
+    <Compile Include="RTF\Contents\Table\Collections\RtfTableCellDefinitionCollection.cs" />
+    <Compile Include="RTF\Contents\Table\Collections\RtfTableColumnCollection.cs" />
+    <Compile Include="RTF\Contents\Table\Collections\RtfTableRowCollection.cs" />
+    <Compile Include="RTF\Contents\Table\RtfTable.cs" />
+    <Compile Include="RTF\Contents\Table\RtfTableCell.cs" />
+    <Compile Include="RTF\Contents\Table\RtfTableCellDefinition.cs" />
+    <Compile Include="RTF\Contents\Table\RtfTableCellStyle.cs" />
+    <Compile Include="RTF\Contents\Table\RtfTableColumn.cs" />
+    <Compile Include="RTF\Contents\Table\RtfTableRow.cs" />
+    <Compile Include="RTF\Contents\Text\RtfFormattedText.cs" />
+    <Compile Include="RTF\Contents\Text\RtfHyperlink.cs" />
+    <Compile Include="RTF\Contents\Text\RtfParagraphContentBase.cs" />
+    <Compile Include="RTF\Contents\Text\RtfText.cs" />
+    <Compile Include="RTF\Contents\Text\RtfTextBase.cs" />
+    <Compile Include="RTF\DocumentInfo\RtfAttributeInfo.cs" />
+    <Compile Include="RTF\DocumentInfo\RtfDocumentInfo.cs" />
+    <Compile Include="RTF\DocumentInfo\RtfTypeInfo.cs" />
+    <Compile Include="RTF\Formatting\RtfBorder.cs" />
+    <Compile Include="RTF\Formatting\RtfParagraphFormatting.cs" />
+    <Compile Include="RTF\Formatting\RtfTableCellBorders.cs" />
+    <Compile Include="RTF\Formatting\RtfTablePadding.cs" />
+    <Compile Include="RTF\Header\RtfColor.cs" />
+    <Compile Include="RTF\Header\RtfColorCollection.cs" />
+    <Compile Include="RTF\Header\RtfFont.cs" />
+    <Compile Include="RTF\Header\RtfFontCollection.cs" />
+    <Compile Include="RTF\Report.cs" />
+    <Compile Include="RTF\RtfDocument.cs" />
+    <Compile Include="RTF\RtfDocumentContentBase.cs" />
+    <Compile Include="RTF\RtfDocumentContentCollection.cs" />
+    <Compile Include="RTF\RtfWriter.cs" />
+    <Compile Include="RTF\TwipConverter.cs" />
+    <Compile Include="Sprache\Input.cs" />
+    <Compile Include="Sprache\IPositionAware.cs" />
+    <Compile Include="Sprache\IResultOfT.cs" />
+    <Compile Include="Sprache\Option.cs" />
+    <Compile Include="Sprache\Parse.cs" />
+    <Compile Include="Sprache\Parse.Optional.cs" />
+    <Compile Include="Sprache\Parse.Positioned.cs" />
+    <Compile Include="Sprache\Parse.Regex.cs" />
+    <Compile Include="Sprache\Parse.Sequence.cs" />
+    <Compile Include="Sprache\ParseException.cs" />
+    <Compile Include="Sprache\ParserOfT.cs" />
+    <Compile Include="Sprache\Position.cs" />
+    <Compile Include="Sprache\Result.cs" />
+    <Compile Include="Sprache\ResultHelper.cs" />
+    <Compile Include="TextParser.cs" />
+    <Compile Include="Tokenizer\Token.cs" />
+    <Compile Include="Tokenizer\Tokenizer.cs" />
+    <Compile Include="Tokenizer\Tokenizer.Entry.cs" />
+    <Compile Include="Tokenizer\TokenizerException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lemon.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
